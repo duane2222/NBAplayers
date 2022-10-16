@@ -3,9 +3,8 @@ html {
 }
 
 body {
-  min-height: 100%;
   margin: 0;
-  background-color: white;
+  background-color: lightblue;
 }
 
 .header {
@@ -28,7 +27,7 @@ h1 {
 
 form {
   float: left;
-  width: 30%;
+  width: 50%;
   text-align: center;
   margin: 10px;
 }
@@ -42,7 +41,7 @@ hr {
   opacity: 1.0;
 }
 
-#weatherSubmit {
+#Submit {
   margin: 10px;
 }
 
@@ -73,19 +72,15 @@ h3 {
   padding-bottom: 50px;
 }
 
-#currWeather {
-  width: 32%;
+#curr {
   height: 520px;
   padding: 10px;
   margin-bottom: 10px;
+
 }
 
-#forecast {
-  width: 60%;
-  padding: 10px;
-}
 
-#mainWeather {
+.main {
   background-color: orange;
   border: 2px outset #4B7180;
   margin-left: 10%;
@@ -132,12 +127,6 @@ a {
 }
 
 
-@media only screen and (max-width: 1200px) {
-  .timeP {
-    width: auto;
-  }
-}
-
 @media only screen and (max-width: 600px) {
   form {
     float: none;
@@ -150,13 +139,9 @@ a {
     align-items: center;
   }
 
-  #currWeather {
+  #curr {
     width: 90%;
     height: auto;
-  }
-
-  #forecast {
-    width: 90%;
   }
 
   h1 {
