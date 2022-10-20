@@ -22,7 +22,7 @@ document.getElementById("Submit").addEventListener("click", function(event) {
     results += '</p>';
     results += "</div>";
   
-    const url2 = "https://www.balldontlie.io/api/v1/season_averages?player_ids[]=" + playerID;
+    const url2 = "https://www.balldontlie.io/api/v1/season_averages?season=2021&player_ids[]=" + playerID;
    fetch(url2)
     .then(function(response) {
         return response.json();
@@ -37,8 +37,8 @@ document.getElementById("Submit").addEventListener("click", function(event) {
           document.getElementById("Results").innerHTML = results;   
       })
   .catch(error => {
-    let results = "<h2>Error</h2>";
-    results += "<p id='errorMessage'>Player couldn't be found. Please check your spelling and try again</p>";
+    results += "<h2>Error</h2>";
+    results += "<p id='errorMessage'>Player didn't play in the 2021 season. Please check your spelling and try again</p>";
     document.getElementById("Results").innerHTML = results;
   });
   })
@@ -46,7 +46,5 @@ document.getElementById("Submit").addEventListener("click", function(event) {
     let results = "<h2>Error</h2>";
     results += "<p id='errorMessage'>Player couldn't be found. Please check your spelling and try again</p>";
     document.getElementById("Results").innerHTML = results;
-  });
-  
- 
+  }); 
 });
